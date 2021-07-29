@@ -39,7 +39,8 @@ const todolist = {
     todo.id = index;
     todo.save((err, todoInfo) => {
         if (err) return res.json({ success: false});
-        return res.status(200).send(index);
+        console.log(todo);
+        return res.status(200).send(todo);
     })
   },
  

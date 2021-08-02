@@ -8,28 +8,18 @@ const start = (req, res) => {
 
 const todolist = {
   start: (req, res) => {
-      console.log("g");
     res.render('todolist');
   },
 
   read: (req, res) => {
-    // return new Promise((resolve, reject) => {
-    //     Todo.find((err, Todo) => {
-    //         const datas = [];
-    //         Todo.forEach((x) => {
-    //             datas.push(x);
-    //         });
-    //         if (err) reject(err);
-    //         resolve(datas);
-    //         })
         if (err) return res.json({ success: false});
         else {
             const datas = [];
             Todo.forEach((x) => {
                 datas.push(x);
             });
-            console.log(datas);
-            return res.status(200).send(datas);
+            console.log(json({datas}));
+            return res.status(200).json({datas});
         }
     },
 

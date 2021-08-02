@@ -4,7 +4,10 @@ const todoSchema = mongoose.Schema({
         type: String,
         length: 20
     },
-
+    number: {
+        type: String,
+        length : 100
+    },
     description: {
         type: String,
         maxlength: 50
